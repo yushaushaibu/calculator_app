@@ -8,9 +8,18 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 });
 
-// loop over operand buttons with click event
+// loop over operand buttons with click event that displays button number
 operand_btn.forEach(btn => {
     btn.addEventListener("click", (e) => {
-        console.log(btn.innerHTML)
+        if (output.value === "0") {
+            output.value = e.target.value;
+        } else if (is_operator) {
+            is_operator = false;
+            output.value = e.target.value;
+        } else if (output.value.includes(".")) {
+            output.value = output.value + "" + e.target.value.replace(".", "")
+        } else {
+            output.value = output.value + "" + e.target.value;
+        }
     })
 })
