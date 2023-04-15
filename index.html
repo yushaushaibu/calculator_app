@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Calculator App</title>
 </head>
@@ -16,7 +19,7 @@
             <header class="calc_header">
                 <input type="text" disabled id="output" class="calc_output" value="0" />
             </header>
-            <footer class="calc_footer">
+            <section class="calc_section">
                 <div class="btn_group">
                     <button data-type="clear" type="reset" value="clear" class="btn btn-grey">
                         AC
@@ -84,9 +87,20 @@
                         =
                     </button>
                 </div>
-            </footer>
+            </section>
         </form>
     </main>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            yushaushaibu
+        </p>
+        <a href="https://github.com/yushaushaibu" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </footer>
 </body>
 
 </html>

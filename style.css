@@ -7,9 +7,9 @@
 }
 
 body {
-  /* background-color: #333333; */
   background-color: rgb(2, 97, 97);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 16px;
@@ -49,11 +49,11 @@ input[type="text"] {
   padding: 12px;
 }
 
-.calc_footer > * + * {
+.calc_section > * + * {
   margin-top: 1rem;
 }
 
-.calc_footer > *:last-child {
+.calc_section > *:last-child {
   gap: 1rem;
 }
 
@@ -113,4 +113,18 @@ input[type="text"] {
 
 .btn-orange:hover {
   background-color: orange;
+}
+
+.fab.fa-github {
+  color: #000000;
+  margin: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  letter-spacing: 2.5px;
+  margin-top: 50px;
 }
