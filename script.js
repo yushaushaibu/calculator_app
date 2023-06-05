@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
 });
 
 // loop over operand buttons with click event that displays button number
-operand_btn.forEach(btn => {
+operand_btn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         if (output.value === "0") {
             output.value = e.target.value;
@@ -22,4 +22,4 @@ operand_btn.forEach(btn => {
             output.value = output.value + "" + e.target.value;
         }
     })
-})
+});
