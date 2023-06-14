@@ -4,10 +4,17 @@ const operand_btns = document.querySelectorAll("button[data-type=operand]");
 const operator_btns = document.querySelectorAll("button[data-type=operator]");
 
 let is_operator = false;
+let equation = [];
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-})
+});
+
+function removeActive() {
+    operator_btns.forEach(btn => {
+        btn.classList.remove("active")
+    });
+};
 
 // Loop over operand buttons with click event that displays button number
 operand_btns.forEach((btn) => {
@@ -25,11 +32,10 @@ operand_btns.forEach((btn) => {
     });
 });
 
-let equation = [];
-
-// Loop over operators
+// Loop over operators with click events that operate on operands
 operator_btns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+        removeActive();
         e.currentTarget.classList.add("active");
 
         switch (e.target.value) {
